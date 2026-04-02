@@ -1,0 +1,19 @@
+name: dhall-directory-tree
+description: Generate a directory tree from a Dhall file
+author: Nikita Volkov
+branding:
+  color: blue
+inputs:
+  dhall_file:
+    description: Path to the source Dhall file
+    required: true
+  output_dir:
+    description: Path to the output directory
+    required: false
+    default: .
+runs:
+  using: docker
+  image: docker/Dockerfile
+  env:
+    dhall_file: ${{ inputs.dhall_file }}
+    output_dir: ${{ inputs.output_dir }}
