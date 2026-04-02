@@ -13,7 +13,7 @@ inputs:
     default: .
 runs:
   using: docker
-  image: docker://ghcr.io/nikita-volkov/dhall-directory-tree.github-action:20ad19bea1efece078a3ffb30dabd640573b7e90
+  image: docker://ghcr.io/nikita-volkov/dhall-directory-tree.github-action:8c52072a692733e04dacf06149f8ebc8fd6c8f7a
   env:
     dhall_file: ${{ inputs.dhall_file }}
     output_dir: ${{ inputs.output_dir }}
