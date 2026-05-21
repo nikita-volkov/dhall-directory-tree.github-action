@@ -4,7 +4,7 @@ RUN apt-get update
 RUN apt-get install cabal-install git ca-certificates libghc-zlib-dev -y
 
 RUN git clone https://github.com/nikita-volkov/dhall-haskell.git /tmp/dhall-haskell
-RUN cd /tmp/dhall-haskell && git checkout 42aaabe2d13b8dc6ba66aa89976ce33523dfebd6 && git submodule update --init --recursive
+RUN cd /tmp/dhall-haskell && git checkout c1be9b9ed7c978555ecfc05187fe891b6bb13947 && git submodule update --init --recursive
 
 RUN cabal update
 RUN cd /tmp/dhall-haskell && cabal install ./dhall --install-method=copy --installdir=/usr/local/bin
